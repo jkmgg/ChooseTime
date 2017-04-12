@@ -242,13 +242,13 @@
     NSString * timestr;
     if (nowF> 60 - self.timeInterval) {
         timestr = [NSString stringWithFormat:@"%@-%@-%@ %d:%ld",currendataY,currendataM,currendataD,nowH+1,(long)self.timeInterval];
-        currenTimeInterval = [self dateOfDatestr:timestr];
+        startInterval = [self dateOfDatestr:timestr];
         
     }else{
         NSInteger minutes = nowF/self.timeInterval;
         
         timestr = [NSString stringWithFormat:@"%@-%@-%@ %d:%ld",currendataY,currendataM,currendataD,nowH,(minutes+1)*self.timeInterval];
-        currenTimeInterval = [self dateOfDatestr:timestr];
+        startInterval = [self dateOfDatestr:timestr];
     }
     
     for (NSTimeInterval i = startInterval; i<endInterval ; i+=self.timeInterval*60) {
