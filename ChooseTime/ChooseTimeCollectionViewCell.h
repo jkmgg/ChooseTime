@@ -1,5 +1,5 @@
 //
-//  LBChooseTimeCollectionViewCell.h
+//  ChooseTimeCollectionViewCell.h
 //  shijian
 //
 //  Created by IOS_MAC PRO on 2017/4/6.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LBChooseTimeCollectionViewCell : UICollectionViewCell
+@interface ChooseTimeCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

@@ -7,25 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E5FAF321E95E1E900567DA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5FAF311E95E1E900567DA1 /* main.m */; };
-		8E5FAF351E95E1E900567DA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5FAF341E95E1E900567DA1 /* AppDelegate.m */; };
-		8E5FAF381E95E1E900567DA1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5FAF371E95E1E900567DA1 /* ViewController.m */; };
-		8E5FAF3B1E95E1E900567DA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5FAF391E95E1E900567DA1 /* Main.storyboard */; };
-		8E5FAF3D1E95E1E900567DA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5FAF3C1E95E1E900567DA1 /* Assets.xcassets */; };
-		8E5FAF401E95E1E900567DA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5FAF3E1E95E1E900567DA1 /* LaunchScreen.storyboard */; };
+		8EF165251E9E321400F2DFED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF165161E9E321300F2DFED /* AppDelegate.m */; };
+		8EF165261E9E321400F2DFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EF165171E9E321300F2DFED /* Assets.xcassets */; };
+		8EF165271E9E321400F2DFED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EF165181E9E321300F2DFED /* LaunchScreen.storyboard */; };
+		8EF165281E9E321400F2DFED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EF1651A1E9E321400F2DFED /* Main.storyboard */; };
+		8EF165291E9E321400F2DFED /* ChooseTimeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF1651D1E9E321400F2DFED /* ChooseTimeCollectionViewCell.m */; };
+		8EF1652A1E9E321400F2DFED /* ChooseTimeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF1651E1E9E321400F2DFED /* ChooseTimeCollectionViewCell.xib */; };
+		8EF1652B1E9E321400F2DFED /* ChooseTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF165201E9E321400F2DFED /* ChooseTimeViewController.m */; };
+		8EF1652C1E9E321400F2DFED /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EF165211E9E321400F2DFED /* Info.plist */; };
+		8EF1652D1E9E321400F2DFED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF165221E9E321400F2DFED /* main.m */; };
+		8EF1652E1E9E321400F2DFED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF165241E9E321400F2DFED /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E5FAF2D1E95E1E900567DA1 /* shijian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shijian.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E5FAF311E95E1E900567DA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8E5FAF331E95E1E900567DA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8E5FAF341E95E1E900567DA1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8E5FAF361E95E1E900567DA1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8E5FAF371E95E1E900567DA1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8E5FAF3A1E95E1E900567DA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8E5FAF3C1E95E1E900567DA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8E5FAF3F1E95E1E900567DA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8E5FAF411E95E1E900567DA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E5FAF2D1E95E1E900567DA1 /* ChooseTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChooseTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EF165151E9E321300F2DFED /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8EF165161E9E321300F2DFED /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8EF165171E9E321300F2DFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8EF165191E9E321300F2DFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8EF1651B1E9E321400F2DFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8EF1651C1E9E321400F2DFED /* ChooseTimeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseTimeCollectionViewCell.h; sourceTree = "<group>"; };
+		8EF1651D1E9E321400F2DFED /* ChooseTimeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseTimeCollectionViewCell.m; sourceTree = "<group>"; };
+		8EF1651E1E9E321400F2DFED /* ChooseTimeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseTimeCollectionViewCell.xib; sourceTree = "<group>"; };
+		8EF1651F1E9E321400F2DFED /* ChooseTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseTimeViewController.h; sourceTree = "<group>"; };
+		8EF165201E9E321400F2DFED /* ChooseTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseTimeViewController.m; sourceTree = "<group>"; };
+		8EF165211E9E321400F2DFED /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EF165221E9E321400F2DFED /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8EF165231E9E321400F2DFED /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8EF165241E9E321400F2DFED /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +51,7 @@
 		8E5FAF241E95E1E900567DA1 = {
 			isa = PBXGroup;
 			children = (
-				8E5FAF2F1E95E1E900567DA1 /* shijian */,
+				8EF165141E9E321300F2DFED /* ChooseTime */,
 				8E5FAF2E1E95E1E900567DA1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,41 +59,38 @@
 		8E5FAF2E1E95E1E900567DA1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E5FAF2D1E95E1E900567DA1 /* shijian.app */,
+				8E5FAF2D1E95E1E900567DA1 /* ChooseTime.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8E5FAF2F1E95E1E900567DA1 /* shijian */ = {
+		8EF165141E9E321300F2DFED /* ChooseTime */ = {
 			isa = PBXGroup;
 			children = (
-				8E5FAF331E95E1E900567DA1 /* AppDelegate.h */,
-				8E5FAF341E95E1E900567DA1 /* AppDelegate.m */,
-				8E5FAF361E95E1E900567DA1 /* ViewController.h */,
-				8E5FAF371E95E1E900567DA1 /* ViewController.m */,
-				8E5FAF391E95E1E900567DA1 /* Main.storyboard */,
-				8E5FAF3C1E95E1E900567DA1 /* Assets.xcassets */,
-				8E5FAF3E1E95E1E900567DA1 /* LaunchScreen.storyboard */,
-				8E5FAF411E95E1E900567DA1 /* Info.plist */,
-				8E5FAF301E95E1E900567DA1 /* Supporting Files */,
+				8EF165151E9E321300F2DFED /* AppDelegate.h */,
+				8EF165161E9E321300F2DFED /* AppDelegate.m */,
+				8EF165171E9E321300F2DFED /* Assets.xcassets */,
+				8EF165181E9E321300F2DFED /* LaunchScreen.storyboard */,
+				8EF1651A1E9E321400F2DFED /* Main.storyboard */,
+				8EF1651C1E9E321400F2DFED /* ChooseTimeCollectionViewCell.h */,
+				8EF1651D1E9E321400F2DFED /* ChooseTimeCollectionViewCell.m */,
+				8EF1651E1E9E321400F2DFED /* ChooseTimeCollectionViewCell.xib */,
+				8EF1651F1E9E321400F2DFED /* ChooseTimeViewController.h */,
+				8EF165201E9E321400F2DFED /* ChooseTimeViewController.m */,
+				8EF165211E9E321400F2DFED /* Info.plist */,
+				8EF165221E9E321400F2DFED /* main.m */,
+				8EF165231E9E321400F2DFED /* ViewController.h */,
+				8EF165241E9E321400F2DFED /* ViewController.m */,
 			);
-			path = shijian;
-			sourceTree = "<group>";
-		};
-		8E5FAF301E95E1E900567DA1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8E5FAF311E95E1E900567DA1 /* main.m */,
-			);
-			name = "Supporting Files";
+			path = ChooseTime;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E5FAF2C1E95E1E900567DA1 /* shijian */ = {
+		8E5FAF2C1E95E1E900567DA1 /* ChooseTime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E5FAF441E95E1E900567DA1 /* Build configuration list for PBXNativeTarget "shijian" */;
+			buildConfigurationList = 8E5FAF441E95E1E900567DA1 /* Build configuration list for PBXNativeTarget "ChooseTime" */;
 			buildPhases = (
 				8E5FAF291E95E1E900567DA1 /* Sources */,
 				8E5FAF2A1E95E1E900567DA1 /* Frameworks */,
@@ -94,9 +100,9 @@
 			);
 			dependencies = (
 			);
-			name = shijian;
+			name = ChooseTime;
 			productName = shijian;
-			productReference = 8E5FAF2D1E95E1E900567DA1 /* shijian.app */;
+			productReference = 8E5FAF2D1E95E1E900567DA1 /* ChooseTime.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +120,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8E5FAF281E95E1E900567DA1 /* Build configuration list for PBXProject "shijian" */;
+			buildConfigurationList = 8E5FAF281E95E1E900567DA1 /* Build configuration list for PBXProject "ChooseTime" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -127,7 +133,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E5FAF2C1E95E1E900567DA1 /* shijian */,
+				8E5FAF2C1E95E1E900567DA1 /* ChooseTime */,
 			);
 		};
 /* End PBXProject section */
@@ -137,9 +143,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E5FAF401E95E1E900567DA1 /* LaunchScreen.storyboard in Resources */,
-				8E5FAF3D1E95E1E900567DA1 /* Assets.xcassets in Resources */,
-				8E5FAF3B1E95E1E900567DA1 /* Main.storyboard in Resources */,
+				8EF1652A1E9E321400F2DFED /* ChooseTimeCollectionViewCell.xib in Resources */,
+				8EF165281E9E321400F2DFED /* Main.storyboard in Resources */,
+				8EF165261E9E321400F2DFED /* Assets.xcassets in Resources */,
+				8EF1652C1E9E321400F2DFED /* Info.plist in Resources */,
+				8EF165271E9E321400F2DFED /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,29 +158,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E5FAF381E95E1E900567DA1 /* ViewController.m in Sources */,
-				8E5FAF351E95E1E900567DA1 /* AppDelegate.m in Sources */,
-				8E5FAF321E95E1E900567DA1 /* main.m in Sources */,
+				8EF165291E9E321400F2DFED /* ChooseTimeCollectionViewCell.m in Sources */,
+				8EF1652B1E9E321400F2DFED /* ChooseTimeViewController.m in Sources */,
+				8EF1652D1E9E321400F2DFED /* main.m in Sources */,
+				8EF165251E9E321400F2DFED /* AppDelegate.m in Sources */,
+				8EF1652E1E9E321400F2DFED /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8E5FAF391E95E1E900567DA1 /* Main.storyboard */ = {
+		8EF165181E9E321300F2DFED /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8E5FAF3A1E95E1E900567DA1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8E5FAF3E1E95E1E900567DA1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E5FAF3F1E95E1E900567DA1 /* Base */,
+				8EF165191E9E321300F2DFED /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8EF1651A1E9E321400F2DFED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EF1651B1E9E321400F2DFED /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -274,7 +284,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = shijian/Info.plist;
+				INFOPLIST_FILE = ChooseTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = APP.shijian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,7 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = shijian/Info.plist;
+				INFOPLIST_FILE = ChooseTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = APP.shijian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,7 +305,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E5FAF281E95E1E900567DA1 /* Build configuration list for PBXProject "shijian" */ = {
+		8E5FAF281E95E1E900567DA1 /* Build configuration list for PBXProject "ChooseTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E5FAF421E95E1E900567DA1 /* Debug */,
@@ -304,13 +314,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E5FAF441E95E1E900567DA1 /* Build configuration list for PBXNativeTarget "shijian" */ = {
+		8E5FAF441E95E1E900567DA1 /* Build configuration list for PBXNativeTarget "ChooseTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E5FAF451E95E1E900567DA1 /* Debug */,
 				8E5FAF461E95E1E900567DA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

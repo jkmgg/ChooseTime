@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChooseTimeCell" id="gTV-IL-0wX" customClass="LBChooseTimeCollectionViewCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChooseTimeCell" id="gTV-IL-0wX" customClass="ChooseTimeCollectionViewCell">
             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -19,9 +19,9 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R87-xV-55s">
-                        <rect key="frame" x="10" y="0.0" width="30" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -29,9 +29,9 @@
             </view>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="R87-xV-55s" secondAttribute="bottom" id="2Ik-Qd-KHw"/>
-                <constraint firstItem="R87-xV-55s" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="I2O-wk-4CW"/>
+                <constraint firstItem="R87-xV-55s" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="I2O-wk-4CW"/>
                 <constraint firstItem="R87-xV-55s" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="P3g-oX-Nzp"/>
-                <constraint firstAttribute="trailing" secondItem="R87-xV-55s" secondAttribute="trailing" constant="10" id="aj4-nU-aPo"/>
+                <constraint firstAttribute="trailing" secondItem="R87-xV-55s" secondAttribute="trailing" id="aj4-nU-aPo"/>
             </constraints>
             <connections>
                 <outlet property="titleLabel" destination="R87-xV-55s" id="xBc-J3-6LP"/>
