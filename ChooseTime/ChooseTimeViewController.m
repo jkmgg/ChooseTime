@@ -200,61 +200,89 @@
     NSString * currendataD = [self detailedStringWithDate:date type:@"dd"];
     
     NSString* startwork = [NSString stringWithFormat:@"%@-%@-%@ %@",currendataY,currendataM,currendataD,self.startTime];
-    NSString* afterwork = [NSString stringWithFormat:@"%@-%@-%@ %@",currendataY,currendataM,currendataD,self.endTime];
+    NSString* afterwork = [NSString stringWithFormat:@"%@-%@-%@ %ld:00",currendataY,currendataM,currendataD,[self.endTime integerValue]];
     
     NSTimeInterval startworkInterval = [self dateOfDatestr:startwork];
     NSTimeInterval afterworkInterval = [self dateOfDatestr:afterwork];
-    NSTimeInterval currenTimeInterval = [[NSDate date] timeIntervalSince1970];
+    
+    NSTimeInterval currenTimeInterval = 0;
+    
+    if (self.ShowTomorrow) {
+        currenTimeInterval = startworkInterval;
+    }else{
+        if (self.selectbtn.tag > 0) {
+            currenTimeInterval = startworkInterval;
+        }else{
+            currenTimeInterval = [[NSDate date] timeIntervalSince1970];
+        }
+    }
     
     NSTimeInterval startInterval = 0;
     NSTimeInterval endInterval = 0;
     
     if (startworkInterval > afterworkInterval || startworkInterval == afterworkInterval) {//跨天选择时间
         
-        NSString* dayendstarstr = [NSString stringWithFormat:@"%@-%@-%ld %@",currendataY,currendataM,[currendataD integerValue]+1,@"0:00"];
+        NSString* dayendstarstr = [NSString stringWithFormat:@"%@-%@-%ld %@",currendataY,currendataM,[currendataD integerValue],@"23:59"];
         endInterval = [self dateOfDatestr:dayendstarstr];
         
-        startInterval = currenTimeInterval;
+        NSString* daystartstarstr = [NSString stringWithFormat:@"%@-%@-%ld %@",currendataY,currendataM,[currendataD integerValue],@"0:00"];
+        startInterval = [self dateOfDatestr:daystartstarstr];
         isAcross = YES;
         
+        if (self.ShowTomorrow) {
+            currenTimeInterval = startInterval;
+        }else{
+            if (self.selectbtn.tag > 0) {
+                currenTimeInterval = startInterval;
+            }else{
+                currenTimeInterval = [[NSDate date] timeIntervalSince1970];
+            }
+        }
     }else{
         if (currenTimeInterval < startworkInterval){
-            if (startworkInterval - currenTimeInterval > 1800) {
-                startInterval = startworkInterval;
-            }else{
-                startInterval = startworkInterval+1800;
-            }
+            
+            startInterval = startworkInterval;
+            endInterval = afterworkInterval - 1000;
+            
         }else if (currenTimeInterval> afterworkInterval - 1800){
             //显示明天时间
-            startInterval = startworkInterval;
+            
+            NSString* afterstartwork = [NSString stringWithFormat:@"%@-%@-%ld %@",currendataY,currendataM,[currendataD integerValue]+1,self.startTime];
             self.ShowTomorrow = YES;
+            [self dateDataProcessing:[NSDate dateWithTimeIntervalSince1970:[self dateOfDatestr:afterstartwork]]];
+            
         }else{
             startInterval = currenTimeInterval ;
+            endInterval = afterworkInterval- 1000;
         }
-        endInterval = afterworkInterval;
     }
     
-    
-    NSString * dataste = [self detailedStringWithDate:date type:@"HH:mm"];
+    NSString * dataste = [self detailedStringWithDate:[NSDate dateWithTimeIntervalSince1970:currenTimeInterval] type:@"HH:mm"];
     int nowF = [[[dataste componentsSeparatedByString:@":"] objectAtIndex:1] intValue];
     int nowH = [[[dataste componentsSeparatedByString:@":"] objectAtIndex:0] intValue];
     
     NSString * timestr;
-    if (nowF> 60 - self.timeInterval) {
-        timestr = [NSString stringWithFormat:@"%@-%@-%@ %d:%ld",currendataY,currendataM,currendataD,nowH+1,(long)self.timeInterval];
-        startInterval = [self dateOfDatestr:timestr];
-        
-    }else{
-        NSInteger minutes = nowF/self.timeInterval;
-        
-        timestr = [NSString stringWithFormat:@"%@-%@-%@ %d:%ld",currendataY,currendataM,currendataD,nowH,(minutes+1)*self.timeInterval];
-        startInterval = [self dateOfDatestr:timestr];
+    
+    if (startInterval != startworkInterval) {
+        if (nowF> 30) {
+            timestr = [NSString stringWithFormat:@"%@-%@-%@ %d:30",currendataY,currendataM,currendataD,nowH+1];
+            startInterval = [self dateOfDatestr:timestr];
+            
+        }else if (nowF == 0){
+            
+            timestr = [NSString stringWithFormat:@"%@-%@-%@ %d:00",currendataY,currendataM,currendataD,nowH];
+            startInterval = [self dateOfDatestr:timestr];
+        }else{
+            timestr = [NSString stringWithFormat:@"%@-%@-%@ %d:00",currendataY,currendataM,currendataD,nowH+1];
+            startInterval = [self dateOfDatestr:timestr];
+        }
     }
     
-    for (NSTimeInterval i = startInterval; i<endInterval ; i+=self.timeInterval*60) {
+    
+    for (NSTimeInterval i = startInterval; i<endInterval ; i+=1800) {
         
         if (isAcross) {
-            if (i < afterworkInterval || i> startworkInterval) {
+            if (i < afterworkInterval + 1 || i> startworkInterval-1) {
                 [self.dataArray addObject:@(i)];
             }
         }else{
@@ -271,18 +299,13 @@
     self.selectbtn = btn;
     self.selectbtn.selected = YES;
     
-    NSDate *newDate;
-    if (btn.tag != 0) {
-        
-        NSCalendar * calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-        NSDateComponents *comps = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond|NSCalendarUnitWeekOfYear|NSCalendarUnitWeekday fromDate:[NSDate date]];
-        
-        NSTimeInterval newinterval = [self dateOfDatestr:[NSString stringWithFormat:@"%ld-%ld-%ld 0:00",comps.year,comps.month,comps.day+btn.tag]];
-        newDate = [NSDate dateWithTimeIntervalSince1970:newinterval];
-        
+    NSDate *newDate ;
+    if (self.ShowTomorrow) {
+        newDate = [NSDate dateWithTimeInterval:24*60*60*(btn.tag+1) sinceDate:[NSDate date]];
     }else{
-        newDate = [NSDate date];
+        newDate = [NSDate dateWithTimeInterval:24*60*60*btn.tag sinceDate:[NSDate date]];
     }
+    
     [self dateDataProcessing:newDate];
     
     [UIView animateWithDuration:0.2 animations:^{
@@ -294,7 +317,7 @@
         //            CGRect rect = self.lineView.frame;
         //            rect.size.width = self.view.frame.size.width/5;
         //            self.lineView.frame = rect;
-        //
+        //            
         //        }];
     }];
 }
